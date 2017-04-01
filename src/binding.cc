@@ -266,10 +266,10 @@ NAN_METHOD(tscrc32) {
     char* buffer = (char*) node::Buffer::Data(info[0]->ToObject());
     unsigned int size = info[1]->Uint32Value();
 
-    uint32_t crc = -1;
+    uint32_t crc = 0xffffffff;
 
     for (unsigned int i = 0 ; i < size; i++) {
-	    crc = (crc << 8) ^ crc32Table[(crc >> 24) ^ buffer[i]];
+	    crc = (crc << 8) ^ crc32Table[((crc >> 24) ^ buffer[i]) & 0xff];
     }
 
     info.GetReturnValue().Set(crc);
