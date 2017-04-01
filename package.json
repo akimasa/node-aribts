@@ -4,7 +4,8 @@
   "description": "MPEG-2 TS Stream Tool for node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp configure build"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,9 @@
   "dependencies": {
     "crc": "^3.4.0",
     "eventemitter3": "^2.0.0",
-    "iconv-lite": "^0.4.13"
+    "iconv-lite": "^0.4.13",
+    "nan": "^2.5.1",
+    "node-gyp": "^3.6.0"
   },
   "license": "MIT"
 }
