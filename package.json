@@ -13,7 +13,9 @@
   "author": "rndomhack",
   "dependencies": {
     "crc": "^3.4.0",
-    "iconv-lite": "^0.4.13"
+    "iconv-lite": "^0.4.13",
+    "nan": "^2.5.1",
+    "node-gyp": "^3.6.0"    
   },
   "license": "MIT"
 }
